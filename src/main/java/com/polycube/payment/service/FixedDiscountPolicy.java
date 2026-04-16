@@ -9,6 +9,5 @@ public class FixedDiscountPolicy implements DiscountPolicy{
 
 	@Override
 	public int discount(int originalPrice) {
-		return discountAmount;
-	}
+		return Math.min(discountAmount, originalPrice);	}
 }
