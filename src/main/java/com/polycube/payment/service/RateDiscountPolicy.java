@@ -1,10 +1,16 @@
 package com.polycube.payment.service;
 
-public class RateDiscountPolicy implements DiscountPolicy{
-	int discountRate ;
+import lombok.Getter;
+
+@Getter
+public class RateDiscountPolicy implements DiscountPolicy {
+	int discountRate;
+	String policyName;
+	int discountAmount;
 
 	public RateDiscountPolicy(int discountRate) {
 		this.discountRate = discountRate;
+		this.policyName = "RateDiscountPolicy";
 	}
 
 	@Override
