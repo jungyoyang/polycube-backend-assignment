@@ -39,8 +39,9 @@ public class PaymentService {
 		int pointDiscount = 0;
 		if (paymentMethod == PaymentMethod.POINT) {
 			// finalPrice에서 5% 추가 할인
-				pointDiscount = finalPrice * 5 / 100;
-				finalPrice -= pointDiscount;
+			PointDiscountPolicy pointPolicy = new PointDiscountPolicy();
+			pointDiscount = pointPolicy.discount(finalPrice);
+			finalPrice -= pointDiscount;
 		}
 
 		// 3. Payment 만들어서 저장
