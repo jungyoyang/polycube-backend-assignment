@@ -12,7 +12,7 @@ import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/payments")   // 공통 경로
+@RequestMapping("/api/payments")
 public class PaymentController {
 	private final	PaymentService paymentService;
 

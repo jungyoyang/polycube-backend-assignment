@@ -56,9 +56,8 @@ public class DiscountHistoryTest {
 		orderRepository.save(order);
 
 
-
 		// when
-		// 1.Mock1000원 리턴하도록 설정
+		// 1.Mock, 1000원 리턴하도록 설정
 				when(discountPolicyFactory.getPolicy(MemberGrade.VIP))
 					.thenReturn(new FixedDiscountPolicy(1000));
 
